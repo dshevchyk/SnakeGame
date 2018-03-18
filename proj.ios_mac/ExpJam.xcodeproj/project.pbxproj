@@ -177,6 +177,8 @@
 		E248EC10205EFDFB0012EC2B /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC0B205EFDEF0012EC2B /* head.png */; };
 		E248EC13205F046E0012EC2B /* DefaultConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC12205F046D0012EC2B /* DefaultConfiguration.cpp */; };
 		E248EC14205F04A70012EC2B /* DefaultConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC12205F046D0012EC2B /* DefaultConfiguration.cpp */; };
+		E248EC18205F16DC0012EC2B /* Food.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC17205F16DC0012EC2B /* Food.cpp */; };
+		E248EC19205F17AB0012EC2B /* Food.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC17205F16DC0012EC2B /* Food.cpp */; };
 		E2515174205EC5E600B947F4 /* SnakeMenuBg.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515173205EC5E600B947F4 /* SnakeMenuBg.png */; };
 		E2515175205EC5EF00B947F4 /* SnakeMenuBg.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515173205EC5E600B947F4 /* SnakeMenuBg.png */; };
 		E2515186205EDAF300B947F4 /* GameplayBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515185205EDAF300B947F4 /* GameplayBG.png */; };
@@ -441,6 +443,8 @@
 		E248EC0C205EFDEF0012EC2B /* body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body.png; sourceTree = "<group>"; };
 		E248EC11205EFFF40012EC2B /* DefaultConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DefaultConfiguration.h; path = ../Classes/DefaultConfiguration.h; sourceTree = "<group>"; };
 		E248EC12205F046D0012EC2B /* DefaultConfiguration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DefaultConfiguration.cpp; path = ../Classes/DefaultConfiguration.cpp; sourceTree = "<group>"; };
+		E248EC16205F16DB0012EC2B /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = ../../Classes/GameScene/Food.h; sourceTree = "<group>"; };
+		E248EC17205F16DC0012EC2B /* Food.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Food.cpp; path = ../../Classes/GameScene/Food.cpp; sourceTree = "<group>"; };
 		E2515173205EC5E600B947F4 /* SnakeMenuBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SnakeMenuBg.png; sourceTree = "<group>"; };
 		E2515185205EDAF300B947F4 /* GameplayBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameplayBG.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -730,6 +734,8 @@
 		E248EBEF205EE5BC0012EC2B /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
+				E248EC17205F16DC0012EC2B /* Food.cpp */,
+				E248EC16205F16DB0012EC2B /* Food.h */,
 				E248EC05205EE7B70012EC2B /* SnakeHead.cpp */,
 				E248EC06205EE7B70012EC2B /* SnakeHead.h */,
 				E248EC03205EE7080012EC2B /* Snake.cpp */,
@@ -1057,6 +1063,7 @@
 				E248EBF5205EE5EA0012EC2B /* GameScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				E248EC07205EE7B70012EC2B /* SnakeHead.cpp in Sources */,
+				E248EC18205F16DC0012EC2B /* Food.cpp in Sources */,
 				E248EC04205EE7090012EC2B /* Snake.cpp in Sources */,
 				E248EC13205F046E0012EC2B /* DefaultConfiguration.cpp in Sources */,
 			);
@@ -1066,6 +1073,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E248EC19205F17AB0012EC2B /* Food.cpp in Sources */,
 				E248EC14205F04A70012EC2B /* DefaultConfiguration.cpp in Sources */,
 				E248EC08205EEBF20012EC2B /* SnakeHead.cpp in Sources */,
 				E248EC09205EEBF20012EC2B /* Snake.cpp in Sources */,

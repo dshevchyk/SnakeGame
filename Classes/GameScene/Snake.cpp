@@ -5,10 +5,10 @@ USING_NS_CC;
 
 
 
-void Snake::update(float dt)
+void Snake::move(float dMove)
 {
     //  update the position for next movement
-    m_bufferMovement += dt * m_currentSpeed;
+    m_bufferMovement += dMove;
     if(m_bufferMovement > DefaultConfiguration::minMovement)
     {
         m_head->move(m_bufferMovement);
@@ -58,4 +58,17 @@ void Snake::setDirection(MoveDirection newDirection)
         m_currentDirection = newDirection;
         m_head->setDirection(m_currentDirection);
     }
+}
+
+void Snake::growUp()
+{
+    //TODO
+}
+Rect Snake::getHeadRect()
+{
+    auto headSize = m_head->getBodySize();
+    return Rect(m_head->getPosition().x - headSize.width / 2,
+                m_head->getPosition().y - headSize.height / 2,
+                headSize.width,
+                headSize.height);
 }

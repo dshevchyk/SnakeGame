@@ -22,6 +22,7 @@ public:
     MoveDirection getDirection();
     // move head by value
     void move(float value);
+    cocos2d::Size getBodySize() const;
 protected:
     
     // scene initialisation

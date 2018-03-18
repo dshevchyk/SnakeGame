@@ -10,8 +10,9 @@
 #define __GAMEPLAY_LAYER_H__
 
 #include "cocos2d.h"
-
+#include "DefaultConfiguration.h"
 class Snake;
+class Food;
 class GameplayLayer : public cocos2d::Layer
 {
 public:
@@ -26,9 +27,12 @@ protected:
     void onExit() override;
     // called once per frame
     void update( float delta ) override;
-    
+    //add food object to layer
+    void addFood();
 private:
     Snake* m_snake = nullptr;
+    Food* m_food = nullptr;
+    float m_currentSpeed = DefaultConfiguration::speed;
 };
 
 #endif //__GAMEPLAY_LAYER_H__

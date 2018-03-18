@@ -8,6 +8,7 @@
 
 #include "GameplayLayer.h"
 #include "Snake.h"
+#include "Food.h"
 USING_NS_CC;
 
 // on "init" you need to initialize your instance
@@ -21,6 +22,7 @@ bool GameplayLayer::init()
     m_snake = Snake::create();
     this->addChild(m_snake);
     
+    addFood();
     return true;
 }
 
@@ -28,21 +30,39 @@ void GameplayLayer::onEnter()
 {
     Layer::onEnter();
     // schedule update calls
-//    scheduleUpdate();
+    scheduleUpdate();
 }
 
 void GameplayLayer::onExit()
 {
     Layer::onExit();
     // unschedule update
-//    unscheduleUpdate();
+    unscheduleUpdate();
 }
 
 void GameplayLayer::update( float delta )
 {
+    m_snake->move(delta * m_currentSpeed);
+    if(m_food && m_snake->getHeadRect().intersectsRect(m_food->getRect()))
+    {
+        addFood();
+        m_snake->growUp();
+    }
     // called once per frame
 //    log( "Update: %f", delta );
     
+}
+void GameplayLayer::addFood()
+{
+    if (m_food != NULL)
+        this->removeChild(m_food, true);
+    
+    Size winSize = DefaultConfiguration::frameSize;
+    auto x = rand() % (int)winSize.width;
+    auto y =  rand() % (int)winSize.height;
+    m_food = Food::create();
+    m_food->setPosition(Vec2(x, y));
+    this->addChild(m_food);
 }
 
 

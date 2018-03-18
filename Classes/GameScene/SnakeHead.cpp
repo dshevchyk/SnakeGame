@@ -111,4 +111,9 @@ Point SnakeHead::getAdjustedPosition(Point newPosition)
     return newPosition;
 }
 
+Size SnakeHead::getBodySize() const
+{
+    return m_headSprite->getContentSize() * m_headSprite->getScale();
+}
+
 
