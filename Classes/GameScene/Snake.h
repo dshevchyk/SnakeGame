@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "MoveDirection.h"
 class SnakeHead;
+class BaseCell;
 class Snake : public cocos2d::Node
 {
 public:
@@ -35,6 +36,7 @@ private:
     MoveDirection m_currentDirection = MoveDirection::Right;
     //  the head of snake
     SnakeHead* m_head = nullptr;
+    std::vector<BaseCell*> m_body;
     float m_bufferMovement = 0.f;
 };
 
