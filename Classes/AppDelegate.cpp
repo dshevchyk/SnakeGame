@@ -7,7 +7,7 @@
 //
 
 #include "AppDelegate.h"
-#include "MainScene.h"
+#include "MenuScene/MenuScene.h"
 
 
 USING_NS_CC;
@@ -29,7 +29,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto glview = director->getOpenGLView();
     if(!glview)
     {
-        glview = GLView::create( "Game" );
+        glview = GLView::create( "Snake" );
         director->setOpenGLView( glview );
     }
 
@@ -40,7 +40,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     director->setAnimationInterval( 1.0 / 60.0f );
 
     // create and run scene. it's an autorelease object
-    auto scene = MainScene::create();
+    auto scene = MenuScene::create();
     director->runWithScene( scene );
 
     return true;
