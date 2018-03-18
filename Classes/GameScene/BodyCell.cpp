@@ -1,17 +1,18 @@
 //
-//  Food.cpp
+//  BaseCell.cpp
 //  ExpJam
 //
 //  Created by dmytros on 18/03/2018.
 //
 //
 
-#include "Food.h"
+#include "BodyCell.h"
 #include "DefaultConfiguration.h"
 
 USING_NS_CC;
 
-const char* Food::getSpriteName() const
+
+const char* BodyCell::getSpriteName() const
 {
-    return "food.png";
+    return "body.png";
 }

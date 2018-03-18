@@ -10,17 +10,16 @@
 #include "DefaultConfiguration.h"
 USING_NS_CC;
 
+const char* SnakeHead::getSpriteName() const
+{
+    return "head.png";
+}
 bool SnakeHead::init() {
-    if ( !Node::init() )
+    if ( !BaseCell::init() )
     {
         return false;
     }
-    m_headSprite = Sprite::create("head.png");
-    m_headSprite->setScale(DefaultConfiguration::snakeDefaultSize.width  / m_headSprite->getContentSize().width,
-                 DefaultConfiguration::snakeDefaultSize.height  / m_headSprite->getContentSize().height);
-
     setRotation(m_currentDirection);
-    this->addChild(m_headSprite);
     return true;
 }
 
@@ -38,16 +37,16 @@ void SnakeHead::setRotation(MoveDirection currentDirection)
     switch(currentDirection)
     {
         case MoveDirection::Up:
-            m_headSprite->setRotation(0);
+            m_Sprite->setRotation(0);
             break;
         case MoveDirection::Down:
-            m_headSprite->setRotation(180);
+            m_Sprite->setRotation(180);
             break;
         case MoveDirection::Right:
-            m_headSprite->setRotation(90);
+            m_Sprite->setRotation(90);
             break;
         case MoveDirection::Left:
-            m_headSprite->setRotation(270);
+            m_Sprite->setRotation(270);
         default:
             break;
     }
@@ -109,11 +108,6 @@ Point SnakeHead::getAdjustedPosition(Point newPosition)
         newPosition.setPoint(right, newPosition.y);
     
     return newPosition;
-}
-
-Size SnakeHead::getBodySize() const
-{
-    return m_headSprite->getContentSize() * m_headSprite->getScale();
 }
 
 

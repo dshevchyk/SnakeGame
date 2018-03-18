@@ -1,22 +1,22 @@
 //
-//  Food.h
+//  BaseCell.h
 //  ExpJam
 //
 //  Created by dmytros on 18/03/2018.
 //
 //
 
-#ifndef __FOOD_H__
-#define __FOOD_H__
+#ifndef __BodyCell_H__
+#define __BodyCell_H__
 
-#include "cocos2d.h"
 #include "BaseCell.h"
 
-class Food: public BaseCell
+
+class BodyCell: public BaseCell
 {
 public:
-    CREATE_FUNC(Food);
+    CREATE_FUNC(BodyCell);
     const char* getSpriteName() const override;
     
 };
-#endif // __SNAKE_HEAD_H__
+#endif // __BodyCell_H__

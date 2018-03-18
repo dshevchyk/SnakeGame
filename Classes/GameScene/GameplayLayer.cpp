@@ -59,7 +59,7 @@ void GameplayLayer::addFood()
     
     Size winSize = DefaultConfiguration::frameSize;
     auto x = rand() % (int)winSize.width;
-    auto y =  rand() % (int)winSize.height;
+    auto y =  winSize.height  /2;//rand() % (int)winSize.height;
     m_food = Food::create();
     m_food->setPosition(Vec2(x, y));
     this->addChild(m_food);

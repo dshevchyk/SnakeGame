@@ -66,9 +66,5 @@ void Snake::growUp()
 }
 Rect Snake::getHeadRect()
 {
-    auto headSize = m_head->getBodySize();
-    return Rect(m_head->getPosition().x - headSize.width / 2,
-                m_head->getPosition().y - headSize.height / 2,
-                headSize.width,
-                headSize.height);
+    return m_head->getRect();
 }

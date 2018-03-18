@@ -9,20 +9,20 @@
 #ifndef __SNAKE_HEAD_H__
 #define __SNAKE_HEAD_H__
 
-#include "cocos2d.h"
+#include "BaseCell.h"
 
 #include "MoveDirection.h"
-class SnakeHead : public cocos2d::Node
+class SnakeHead : public BaseCell
 {
 public:
     CREATE_FUNC(SnakeHead);
+    const char* getSpriteName() const override;
     // set the direction for next movement
     void setDirection(MoveDirection);
     // get the current diraction
     MoveDirection getDirection();
     // move head by value
     void move(float value);
-    cocos2d::Size getBodySize() const;
 protected:
     
     // scene initialisation
@@ -35,7 +35,6 @@ protected:
     
     //direction for next movements
     MoveDirection m_currentDirection = MoveDirection::Right;
-    cocos2d::Sprite* m_headSprite = nullptr;
 };
 
 #endif // __SNAKE_HEAD_H__
