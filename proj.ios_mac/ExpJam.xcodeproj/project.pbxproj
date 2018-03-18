@@ -159,14 +159,28 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		E248EBF4205EE5EA0012EC2B /* GameplayLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EBF1205EE5EA0012EC2B /* GameplayLayer.cpp */; };
+		E248EBF5205EE5EA0012EC2B /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EBF2205EE5EA0012EC2B /* GameScene.cpp */; };
+		E248EBFB205EE5FA0012EC2B /* MenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EBF6205EE5FA0012EC2B /* MenuLayer.cpp */; };
+		E248EBFC205EE5FA0012EC2B /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EBF9205EE5FA0012EC2B /* MenuScene.cpp */; };
+		E248EBFD205EE6040012EC2B /* GameplayLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EBF1205EE5EA0012EC2B /* GameplayLayer.cpp */; };
+		E248EBFE205EE6040012EC2B /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EBF2205EE5EA0012EC2B /* GameScene.cpp */; };
+		E248EBFF205EE6040012EC2B /* MenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EBF6205EE5FA0012EC2B /* MenuLayer.cpp */; };
+		E248EC00205EE6040012EC2B /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EBF9205EE5FA0012EC2B /* MenuScene.cpp */; };
+		E248EC04205EE7090012EC2B /* Snake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC03205EE7080012EC2B /* Snake.cpp */; };
+		E248EC07205EE7B70012EC2B /* SnakeHead.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC05205EE7B70012EC2B /* SnakeHead.cpp */; };
+		E248EC08205EEBF20012EC2B /* SnakeHead.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC05205EE7B70012EC2B /* SnakeHead.cpp */; };
+		E248EC09205EEBF20012EC2B /* Snake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC03205EE7080012EC2B /* Snake.cpp */; };
+		E248EC0D205EFDEF0012EC2B /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC0B205EFDEF0012EC2B /* head.png */; };
+		E248EC0E205EFDEF0012EC2B /* body.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC0C205EFDEF0012EC2B /* body.png */; };
+		E248EC0F205EFDFB0012EC2B /* body.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC0C205EFDEF0012EC2B /* body.png */; };
+		E248EC10205EFDFB0012EC2B /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC0B205EFDEF0012EC2B /* head.png */; };
+		E248EC13205F046E0012EC2B /* DefaultConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC12205F046D0012EC2B /* DefaultConfiguration.cpp */; };
+		E248EC14205F04A70012EC2B /* DefaultConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC12205F046D0012EC2B /* DefaultConfiguration.cpp */; };
 		E2515174205EC5E600B947F4 /* SnakeMenuBg.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515173205EC5E600B947F4 /* SnakeMenuBg.png */; };
 		E2515175205EC5EF00B947F4 /* SnakeMenuBg.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515173205EC5E600B947F4 /* SnakeMenuBg.png */; };
-		E2515179205ECF1C00B947F4 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2515177205ECF1C00B947F4 /* GameScene.cpp */; };
-		E2515180205ECF7900B947F4 /* MenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E251517B205ECF7700B947F4 /* MenuLayer.cpp */; };
-		E2515181205ECF7900B947F4 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E251517E205ECF7900B947F4 /* MenuScene.cpp */; };
-		E2515182205ED03700B947F4 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2515177205ECF1C00B947F4 /* GameScene.cpp */; };
-		E2515183205ED04900B947F4 /* MenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E251517B205ECF7700B947F4 /* MenuLayer.cpp */; };
-		E2515184205ED04900B947F4 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E251517E205ECF7900B947F4 /* MenuScene.cpp */; };
+		E2515186205EDAF300B947F4 /* GameplayBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515185205EDAF300B947F4 /* GameplayBG.png */; };
+		E2515187205EDB9A00B947F4 /* GameplayBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515185205EDAF300B947F4 /* GameplayBG.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -409,14 +423,26 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		E248EBF0205EE5EA0012EC2B /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../../Classes/GameScene/GameScene.h; sourceTree = "<group>"; };
+		E248EBF1205EE5EA0012EC2B /* GameplayLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameplayLayer.cpp; path = ../../Classes/GameScene/GameplayLayer.cpp; sourceTree = "<group>"; };
+		E248EBF2205EE5EA0012EC2B /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = ../../Classes/GameScene/GameScene.cpp; sourceTree = "<group>"; };
+		E248EBF3205EE5EA0012EC2B /* GameplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameplayLayer.h; path = ../../Classes/GameScene/GameplayLayer.h; sourceTree = "<group>"; };
+		E248EBF6205EE5FA0012EC2B /* MenuLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuLayer.cpp; path = ../Classes/MenuScene/MenuLayer.cpp; sourceTree = "<group>"; };
+		E248EBF7205EE5FA0012EC2B /* IMenuDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMenuDelegate.h; path = ../Classes/MenuScene/IMenuDelegate.h; sourceTree = "<group>"; };
+		E248EBF8205EE5FA0012EC2B /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuLayer.h; path = ../Classes/MenuScene/MenuLayer.h; sourceTree = "<group>"; };
+		E248EBF9205EE5FA0012EC2B /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuScene.cpp; path = ../Classes/MenuScene/MenuScene.cpp; sourceTree = "<group>"; };
+		E248EBFA205EE5FA0012EC2B /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuScene.h; path = ../Classes/MenuScene/MenuScene.h; sourceTree = "<group>"; };
+		E248EC02205EE7080012EC2B /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Snake.h; path = ../../Classes/GameScene/Snake.h; sourceTree = "<group>"; };
+		E248EC03205EE7080012EC2B /* Snake.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Snake.cpp; path = ../../Classes/GameScene/Snake.cpp; sourceTree = "<group>"; };
+		E248EC05205EE7B70012EC2B /* SnakeHead.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SnakeHead.cpp; path = ../../Classes/GameScene/SnakeHead.cpp; sourceTree = "<group>"; };
+		E248EC06205EE7B70012EC2B /* SnakeHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SnakeHead.h; path = ../../Classes/GameScene/SnakeHead.h; sourceTree = "<group>"; };
+		E248EC0A205EED480012EC2B /* MoveDirection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MoveDirection.h; path = ../../Classes/GameScene/MoveDirection.h; sourceTree = "<group>"; };
+		E248EC0B205EFDEF0012EC2B /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
+		E248EC0C205EFDEF0012EC2B /* body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body.png; sourceTree = "<group>"; };
+		E248EC11205EFFF40012EC2B /* DefaultConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DefaultConfiguration.h; path = ../Classes/DefaultConfiguration.h; sourceTree = "<group>"; };
+		E248EC12205F046D0012EC2B /* DefaultConfiguration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DefaultConfiguration.cpp; path = ../Classes/DefaultConfiguration.cpp; sourceTree = "<group>"; };
 		E2515173205EC5E600B947F4 /* SnakeMenuBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SnakeMenuBg.png; sourceTree = "<group>"; };
-		E2515177205ECF1C00B947F4 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = ../../Classes/GameScene/GameScene.cpp; sourceTree = "<group>"; };
-		E2515178205ECF1C00B947F4 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../../Classes/GameScene/GameScene.h; sourceTree = "<group>"; };
-		E251517B205ECF7700B947F4 /* MenuLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuLayer.cpp; path = ../../Classes/MenuScene/MenuLayer.cpp; sourceTree = "<group>"; };
-		E251517C205ECF7700B947F4 /* IMenuDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMenuDelegate.h; path = ../../Classes/MenuScene/IMenuDelegate.h; sourceTree = "<group>"; };
-		E251517D205ECF7700B947F4 /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuLayer.h; path = ../../Classes/MenuScene/MenuLayer.h; sourceTree = "<group>"; };
-		E251517E205ECF7900B947F4 /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuScene.cpp; path = ../../Classes/MenuScene/MenuScene.cpp; sourceTree = "<group>"; };
-		E251517F205ECF7900B947F4 /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuScene.h; path = ../../Classes/MenuScene/MenuScene.h; sourceTree = "<group>"; };
+		E2515185205EDAF300B947F4 /* GameplayBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameplayBG.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -486,10 +512,12 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E251517A205ECF6600B947F4 /* MenuScene */,
-				E2515176205ECEDA00B947F4 /* GameScene */,
+				E248EBEF205EE5BC0012EC2B /* GameScene */,
+				E248EBEE205EE5B60012EC2B /* MenuScene */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
+				E248EC11205EFFF40012EC2B /* DefaultConfiguration.h */,
+				E248EC12205F046D0012EC2B /* DefaultConfiguration.cpp */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -639,6 +667,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E248EC0C205EFDEF0012EC2B /* body.png */,
+				E248EC0B205EFDEF0012EC2B /* head.png */,
+				E2515185205EDAF300B947F4 /* GameplayBG.png */,
 				E2515173205EC5E600B947F4 /* SnakeMenuBg.png */,
 				22F104E11A36161500BDC1A9 /* fonts */,
 				22F104E81A36161500BDC1A9 /* menu */,
@@ -684,27 +715,33 @@
 			path = ../Resources;
 			sourceTree = "<group>";
 		};
-		E2515176205ECEDA00B947F4 /* GameScene */ = {
+		E248EBEE205EE5B60012EC2B /* MenuScene */ = {
 			isa = PBXGroup;
 			children = (
-				E2515177205ECF1C00B947F4 /* GameScene.cpp */,
-				E2515178205ECF1C00B947F4 /* GameScene.h */,
-			);
-			name = GameScene;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		E251517A205ECF6600B947F4 /* MenuScene */ = {
-			isa = PBXGroup;
-			children = (
-				E251517C205ECF7700B947F4 /* IMenuDelegate.h */,
-				E251517B205ECF7700B947F4 /* MenuLayer.cpp */,
-				E251517D205ECF7700B947F4 /* MenuLayer.h */,
-				E251517E205ECF7900B947F4 /* MenuScene.cpp */,
-				E251517F205ECF7900B947F4 /* MenuScene.h */,
+				E248EBF7205EE5FA0012EC2B /* IMenuDelegate.h */,
+				E248EBF6205EE5FA0012EC2B /* MenuLayer.cpp */,
+				E248EBF8205EE5FA0012EC2B /* MenuLayer.h */,
+				E248EBF9205EE5FA0012EC2B /* MenuScene.cpp */,
+				E248EBFA205EE5FA0012EC2B /* MenuScene.h */,
 			);
 			name = MenuScene;
-			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E248EBEF205EE5BC0012EC2B /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				E248EC05205EE7B70012EC2B /* SnakeHead.cpp */,
+				E248EC06205EE7B70012EC2B /* SnakeHead.h */,
+				E248EC03205EE7080012EC2B /* Snake.cpp */,
+				E248EC02205EE7080012EC2B /* Snake.h */,
+				E248EBF1205EE5EA0012EC2B /* GameplayLayer.cpp */,
+				E248EBF3205EE5EA0012EC2B /* GameplayLayer.h */,
+				E248EBF2205EE5EA0012EC2B /* GameScene.cpp */,
+				E248EBF0205EE5EA0012EC2B /* GameScene.h */,
+				E248EC0A205EED480012EC2B /* MoveDirection.h */,
+			);
+			name = GameScene;
+			path = "New Group2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -908,13 +945,16 @@
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				22F1050F1A36161500BDC1A9 /* Bomb1.png in Resources */,
 				22F1050B1A36161500BDC1A9 /* BlueBlob-Flat.png in Resources */,
+				E2515186205EDAF300B947F4 /* GameplayBG.png in Resources */,
 				22F1055D1A36161500BDC1A9 /* Smoke_White.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				22F1055B1A36161500BDC1A9 /* Smoke_Orange.png in Resources */,
 				22F105471A36161500BDC1A9 /* Leaf1.png in Resources */,
 				22F105251A36161500BDC1A9 /* Leefy-Skeleton.png in Resources */,
+				E248EC0E205EFDEF0012EC2B /* body.png in Resources */,
 				22F105611A36161500BDC1A9 /* SpikeBall1.png in Resources */,
+				E248EC0D205EFDEF0012EC2B /* head.png in Resources */,
 				22F1053B1A36161500BDC1A9 /* RedBlob-Falling.png in Resources */,
 				22F105271A36161500BDC1A9 /* ButtonBlue.png in Resources */,
 				22F1051F1A36161500BDC1A9 /* Leefy-Bump.png in Resources */,
@@ -944,6 +984,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E248EC0F205EFDFB0012EC2B /* body.png in Resources */,
+				E248EC10205EFDFB0012EC2B /* head.png in Resources */,
+				E2515187205EDB9A00B947F4 /* GameplayBG.png in Resources */,
 				E2515175205EC5EF00B947F4 /* SnakeMenuBg.png in Resources */,
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				22F1050A1A36161500BDC1A9 /* BlueBlob-Falling.png in Resources */,
@@ -1005,13 +1048,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E248EBFB205EE5FA0012EC2B /* MenuLayer.cpp in Sources */,
+				E248EBFC205EE5FA0012EC2B /* MenuScene.cpp in Sources */,
+				E248EBF4205EE5EA0012EC2B /* GameplayLayer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
-				E2515180205ECF7900B947F4 /* MenuLayer.cpp in Sources */,
-				E2515179205ECF1C00B947F4 /* GameScene.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				E248EBF5205EE5EA0012EC2B /* GameScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				E2515181205ECF7900B947F4 /* MenuScene.cpp in Sources */,
+				E248EC07205EE7B70012EC2B /* SnakeHead.cpp in Sources */,
+				E248EC04205EE7090012EC2B /* Snake.cpp in Sources */,
+				E248EC13205F046E0012EC2B /* DefaultConfiguration.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,9 +1066,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2515183205ED04900B947F4 /* MenuLayer.cpp in Sources */,
-				E2515184205ED04900B947F4 /* MenuScene.cpp in Sources */,
-				E2515182205ED03700B947F4 /* GameScene.cpp in Sources */,
+				E248EC14205F04A70012EC2B /* DefaultConfiguration.cpp in Sources */,
+				E248EC08205EEBF20012EC2B /* SnakeHead.cpp in Sources */,
+				E248EC09205EEBF20012EC2B /* Snake.cpp in Sources */,
+				E248EBFD205EE6040012EC2B /* GameplayLayer.cpp in Sources */,
+				E248EBFE205EE6040012EC2B /* GameScene.cpp in Sources */,
+				E248EBFF205EE6040012EC2B /* MenuLayer.cpp in Sources */,
+				E248EC00205EE6040012EC2B /* MenuScene.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);

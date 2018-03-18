@@ -1,22 +1,22 @@
 //
-//  GameScene.h
+//  GameplayLayer.h
 //  ExpJam
 //
 //  Created by dmytros on 18/03/2018.
 //
 //
 
-#ifndef __GAME_SCENE_H__
-#define __GAME_SCENE_H__
+#ifndef __GAMEPLAY_LAYER_H__
+#define __GAMEPLAY_LAYER_H__
 
 #include "cocos2d.h"
 
-class GameplayLayer;
-class GameScene : public cocos2d::Scene
+class Snake;
+class GameplayLayer : public cocos2d::Layer
 {
 public:
     // implement the "static create()" method manually
-    CREATE_FUNC(GameScene);
+    CREATE_FUNC(GameplayLayer);
 protected:
     // scene initialisation
     bool init() override;
@@ -28,7 +28,7 @@ protected:
     void update( float delta ) override;
     
 private:
-    GameplayLayer* m_GameplayLayer = nullptr;
+    Snake* m_snake = nullptr;
 };
 
-#endif //__GAME_SCENE_H__
+#endif //__GAMEPLAY_LAYER_H__

@@ -8,7 +8,7 @@
 
 #include "AppDelegate.h"
 #include "MenuScene/MenuScene.h"
-
+#include "DefaultConfiguration.h"
 
 USING_NS_CC;
 
@@ -30,8 +30,10 @@ bool AppDelegate::applicationDidFinishLaunching()
     if(!glview)
     {
         glview = GLView::create( "Snake" );
+        glview->setFrameSize(DefaultConfiguration::frameSize.width, DefaultConfiguration::frameSize.height);
         director->setOpenGLView( glview );
     }
+    
 
     // turn on display FPS
     director->setDisplayStats( false );
