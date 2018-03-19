@@ -33,7 +33,6 @@ bool Snake::init() {
     m_body.reserve(DefaultConfiguration::snakeMaxSize);
     m_head = SnakeHead::create();
     m_head->setDirection(m_currentDirection);
-    m_head->setPosition(Vec2(100, DefaultConfiguration::frameSize.height / 2));
     this->addChild(m_head);
     m_body.push_back(m_head);
     return true;
@@ -95,4 +94,9 @@ void Snake::growUp()
 Rect Snake::getHeadRect()
 {
     return m_head->getRect();
+}
+
+void Snake::setHeadPosition(const cocos2d::Vec2& headPos)
+{
+    m_head->setPosition(headPos);
 }

@@ -28,7 +28,8 @@ MoveDirection Player::searchDirection(cocos2d::Point destination)
     float absX = abs(x);
     float absY = abs(y);
 
-    if ((currentDirection == MoveDirection::Up || currentDirection == MoveDirection::Down) && absX > 0.9 * DefaultConfiguration::minMovement)
+    //0.5 * DefaultConfiguration::minMovement + 1 - to make snake movements more smart
+    if ((currentDirection == MoveDirection::Up || currentDirection == MoveDirection::Down) && absX > 0.5 * DefaultConfiguration::minMovement + 1)
     {
         if (x > 0)
             return MoveDirection::Right;
@@ -36,7 +37,7 @@ MoveDirection Player::searchDirection(cocos2d::Point destination)
             return MoveDirection::Left;
         else {}
     }
-    else if ((currentDirection == MoveDirection::Right || currentDirection == MoveDirection::Left)&& absY >0.9 * DefaultConfiguration::minMovement)
+    else if ((currentDirection == MoveDirection::Right || currentDirection == MoveDirection::Left)&& absY >0.5 * DefaultConfiguration::minMovement + 1)
     {
         if (y > 0)
             return MoveDirection::Up;

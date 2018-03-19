@@ -21,9 +21,14 @@ bool GameplayLayer::init()
         return false;
     }
     m_snake = Snake::create();
+    
+    m_snake->setHeadPosition(Vec2(std::rand() % (int)DefaultConfiguration::frameSize.width,
+                              std::rand() % (int)DefaultConfiguration::frameSize.height));
     this->addChild(m_snake);
     
     m_anotherSnake = Snake::create();
+    m_anotherSnake->setHeadPosition(Vec2(std::rand() % (int)DefaultConfiguration::frameSize.width,
+                                     std::rand() % (int)DefaultConfiguration::frameSize.height));
     this->addChild(m_anotherSnake);
     m_player = std::unique_ptr<Player>(new Player(m_anotherSnake));
     addFood();

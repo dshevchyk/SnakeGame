@@ -24,6 +24,7 @@ public:
     bool move(float dMove);
     void growUp();
     cocos2d::Rect getHeadRect();
+    void setHeadPosition(const cocos2d::Vec2&);
 protected:
     bool init() override;
     void onEnter() override;
