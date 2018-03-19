@@ -19,15 +19,8 @@ public:
     
 private:
     MoveDirection searchDirection(cocos2d::Point);  //  search next direction
-    void adjustDirection(int);
     
     Snake* m_mySnake;
-    cocos2d::Point m_headPosition;
-    cocos2d::Point m_nexPosition;
-    cocos2d::Rect m_upRect;
-    cocos2d::Rect m_downRect;
-    cocos2d::Rect m_rightRect;
-    cocos2d::Rect m_leftRect;
 };
 
 #endif /* Player_h */

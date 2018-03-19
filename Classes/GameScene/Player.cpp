@@ -13,18 +13,17 @@
 Player::Player(Snake* snake)
 {
     m_mySnake = snake;
-    m_headPosition = m_mySnake->getHeadRect().origin;
 }
 
 MoveDirection Player::searchDirection(cocos2d::Point destination)
 {
-    m_headPosition = m_mySnake->getHeadRect().origin;
+    auto headPosition = m_mySnake->getHeadRect().origin;
     MoveDirection currentDirection = m_mySnake->getDirection();
     
     
     //  get the distance
-    float x = destination.x - m_headPosition.x;
-    float y = destination.y - m_headPosition.y;
+    float x = destination.x - headPosition.x;
+    float y = destination.y - headPosition.y;
 
     float absX = abs(x);
     float absY = abs(y);
