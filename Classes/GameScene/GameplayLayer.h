@@ -14,6 +14,7 @@
 class Snake;
 class Food;
 enum class MoveDirection;
+class Player;
 class GameplayLayer : public cocos2d::Layer
 {
 public:
@@ -33,7 +34,9 @@ protected:
     void addFood();
 private:
     Snake* m_snake = nullptr;
+    Snake* m_anotherSnake = nullptr;
     Food* m_food = nullptr;
+    std::unique_ptr<Player> m_player = nullptr;
     float m_currentSpeed = DefaultConfiguration::speed;
 };
 

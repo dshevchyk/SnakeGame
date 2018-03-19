@@ -21,7 +21,7 @@ public:
     void setDirection(MoveDirection);
     MoveDirection getDirection();
     
-    void move(float dMove);
+    bool move(float dMove);
     void growUp();
     cocos2d::Rect getHeadRect();
 protected:

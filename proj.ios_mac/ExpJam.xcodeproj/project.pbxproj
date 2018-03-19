@@ -96,6 +96,8 @@
 		E248EC2D205F33A90012EC2B /* buttonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC2C205F33A90012EC2B /* buttonSelected.png */; };
 		E248EC2E205F33B70012EC2B /* buttonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC2C205F33A90012EC2B /* buttonSelected.png */; };
 		E248EC30205F3D1F0012EC2B /* IGamePadDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = E248EC2F205F3B960012EC2B /* IGamePadDelegate.h */; };
+		E248EC33205F41FE0012EC2B /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC31205F41FE0012EC2B /* Player.cpp */; };
+		E248EC34205F430C0012EC2B /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC31205F41FE0012EC2B /* Player.cpp */; };
 		E2515174205EC5E600B947F4 /* SnakeMenuBg.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515173205EC5E600B947F4 /* SnakeMenuBg.png */; };
 		E2515175205EC5EF00B947F4 /* SnakeMenuBg.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515173205EC5E600B947F4 /* SnakeMenuBg.png */; };
 		E2515186205EDAF300B947F4 /* GameplayBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515185205EDAF300B947F4 /* GameplayBG.png */; };
@@ -324,6 +326,8 @@
 		E248EC29205F335A0012EC2B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		E248EC2C205F33A90012EC2B /* buttonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSelected.png; sourceTree = "<group>"; };
 		E248EC2F205F3B960012EC2B /* IGamePadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IGamePadDelegate.h; path = ../../Resources/IGamePadDelegate.h; sourceTree = "<group>"; };
+		E248EC31205F41FE0012EC2B /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../../Classes/GameScene/Player.cpp; sourceTree = "<group>"; };
+		E248EC32205F41FE0012EC2B /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../../Classes/GameScene/Player.h; sourceTree = "<group>"; };
 		E2515173205EC5E600B947F4 /* SnakeMenuBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SnakeMenuBg.png; sourceTree = "<group>"; };
 		E2515185205EDAF300B947F4 /* GameplayBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameplayBG.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -570,6 +574,8 @@
 				E248EBF2205EE5EA0012EC2B /* GameScene.cpp */,
 				E248EBF0205EE5EA0012EC2B /* GameScene.h */,
 				E248EC0A205EED480012EC2B /* MoveDirection.h */,
+				E248EC31205F41FE0012EC2B /* Player.cpp */,
+				E248EC32205F41FE0012EC2B /* Player.h */,
 			);
 			name = GameScene;
 			path = "New Group2";
@@ -797,6 +803,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				E248EBF5205EE5EA0012EC2B /* GameScene.cpp in Sources */,
+				E248EC33205F41FE0012EC2B /* Player.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				E248EC07205EE7B70012EC2B /* SnakeHead.cpp in Sources */,
 				E248EC18205F16DC0012EC2B /* Food.cpp in Sources */,
@@ -811,6 +818,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E248EC34205F430C0012EC2B /* Player.cpp in Sources */,
 				E248EC30205F3D1F0012EC2B /* IGamePadDelegate.h in Sources */,
 				E248EC28205F30F80012EC2B /* GamePadLayer.cpp in Sources */,
 				E248EC22205F23C30012EC2B /* BaseCell.cpp in Sources */,

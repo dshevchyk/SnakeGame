@@ -6,7 +6,7 @@ USING_NS_CC;
 
 
 
-void Snake::move(float dMove)
+bool Snake::move(float dMove)
 {
     //  update the position for next movement
     m_bufferMovement += dMove;
@@ -18,7 +18,9 @@ void Snake::move(float dMove)
         }
         m_head->move(DefaultConfiguration::minMovement);
         m_bufferMovement = 0.f;
+        return true;
     }
+    return false;
 }
 
 bool Snake::init() {

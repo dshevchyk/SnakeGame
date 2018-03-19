@@ -9,7 +9,7 @@
 #include "GameScene.h"
 #include "GameplayLayer.h"
 #include "GamePadLayer.h"
-
+#include "Player.h"
 USING_NS_CC;
 
 // on "init" you need to initialize your instance

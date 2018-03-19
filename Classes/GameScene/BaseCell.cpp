@@ -18,7 +18,7 @@ bool BaseCell::init() {
     }
     m_Sprite = Sprite::create(getSpriteName());
     m_Sprite->setScale(DefaultConfiguration::snakeDefaultSize.width  / m_Sprite->getContentSize().width,
-                 DefaultConfiguration::snakeDefaultSize.height  / m_Sprite->getContentSize().height);
+                 DefaultConfiguration::snakeDefaultSize.width  / m_Sprite->getContentSize().width);
 
     this->addChild(m_Sprite);
     return true;

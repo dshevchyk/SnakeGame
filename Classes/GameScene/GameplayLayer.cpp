@@ -9,6 +9,7 @@
 #include "GameplayLayer.h"
 #include "Snake.h"
 #include "Food.h"
+#include "Player.h"
 USING_NS_CC;
 
 // on "init" you need to initialize your instance
@@ -22,6 +23,9 @@ bool GameplayLayer::init()
     m_snake = Snake::create();
     this->addChild(m_snake);
     
+    m_anotherSnake = Snake::create();
+    this->addChild(m_anotherSnake);
+    m_player = std::unique_ptr<Player>(new Player(m_anotherSnake));
     addFood();
     return true;
 }
@@ -42,11 +46,20 @@ void GameplayLayer::onExit()
 
 void GameplayLayer::update( float delta )
 {
-    m_snake->move(delta * m_currentSpeed);
-    if(m_food && m_snake->getHeadRect().intersectsRect(m_food->getRect()))
+    if( m_snake->getHeadRect().intersectsRect(m_food->getRect()))
     {
         addFood();
         m_snake->growUp();
+    }
+    if ( m_anotherSnake->getHeadRect().intersectsRect(m_food->getRect()))
+    {
+        addFood();
+        m_anotherSnake->growUp();
+    }
+    m_snake->move(delta * m_currentSpeed);
+    if(m_anotherSnake->move(delta * m_currentSpeed))
+    {
+        m_player->play(m_food->getPosition());
     }
     // called once per frame
 //    log( "Update: %f", delta );
@@ -59,7 +72,7 @@ void GameplayLayer::addFood()
     
     Size winSize = DefaultConfiguration::frameSize;
     auto x = rand() % (int)winSize.width;
-    auto y =  winSize.height  /2;//rand() % (int)winSize.height;
+    auto y =  rand() % (int)winSize.height;
     m_food = Food::create();
     m_food->setPosition(Vec2(x, y));
     this->addChild(m_food);
