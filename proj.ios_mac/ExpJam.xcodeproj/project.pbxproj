@@ -89,6 +89,13 @@
 		E248EC22205F23C30012EC2B /* BaseCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC1D205F21730012EC2B /* BaseCell.cpp */; };
 		E248EC23205F23C30012EC2B /* BodyCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC1A205F202B0012EC2B /* BodyCell.cpp */; };
 		E248EC24205F24050012EC2B /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC20205F22B80012EC2B /* food.png */; };
+		E248EC27205F30220012EC2B /* GamePadLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC25205F30210012EC2B /* GamePadLayer.cpp */; };
+		E248EC28205F30F80012EC2B /* GamePadLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E248EC25205F30210012EC2B /* GamePadLayer.cpp */; };
+		E248EC2A205F335A0012EC2B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC29205F335A0012EC2B /* button.png */; };
+		E248EC2B205F33760012EC2B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC29205F335A0012EC2B /* button.png */; };
+		E248EC2D205F33A90012EC2B /* buttonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC2C205F33A90012EC2B /* buttonSelected.png */; };
+		E248EC2E205F33B70012EC2B /* buttonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = E248EC2C205F33A90012EC2B /* buttonSelected.png */; };
+		E248EC30205F3D1F0012EC2B /* IGamePadDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = E248EC2F205F3B960012EC2B /* IGamePadDelegate.h */; };
 		E2515174205EC5E600B947F4 /* SnakeMenuBg.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515173205EC5E600B947F4 /* SnakeMenuBg.png */; };
 		E2515175205EC5EF00B947F4 /* SnakeMenuBg.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515173205EC5E600B947F4 /* SnakeMenuBg.png */; };
 		E2515186205EDAF300B947F4 /* GameplayBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E2515185205EDAF300B947F4 /* GameplayBG.png */; };
@@ -312,6 +319,11 @@
 		E248EC1D205F21730012EC2B /* BaseCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseCell.cpp; path = ../../Classes/GameScene/BaseCell.cpp; sourceTree = "<group>"; };
 		E248EC1E205F21730012EC2B /* BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseCell.h; path = ../../Classes/GameScene/BaseCell.h; sourceTree = "<group>"; };
 		E248EC20205F22B80012EC2B /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
+		E248EC25205F30210012EC2B /* GamePadLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GamePadLayer.cpp; path = ../../Classes/GameScene/GamePadLayer.cpp; sourceTree = "<group>"; };
+		E248EC26205F30220012EC2B /* GamePadLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePadLayer.h; path = ../../Classes/GameScene/GamePadLayer.h; sourceTree = "<group>"; };
+		E248EC29205F335A0012EC2B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		E248EC2C205F33A90012EC2B /* buttonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSelected.png; sourceTree = "<group>"; };
+		E248EC2F205F3B960012EC2B /* IGamePadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IGamePadDelegate.h; path = ../../Resources/IGamePadDelegate.h; sourceTree = "<group>"; };
 		E2515173205EC5E600B947F4 /* SnakeMenuBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SnakeMenuBg.png; sourceTree = "<group>"; };
 		E2515185205EDAF300B947F4 /* GameplayBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameplayBG.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -512,6 +524,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E248EC2C205F33A90012EC2B /* buttonSelected.png */,
+				E248EC29205F335A0012EC2B /* button.png */,
 				E248EC20205F22B80012EC2B /* food.png */,
 				E248EC0C205EFDEF0012EC2B /* body.png */,
 				E248EC0B205EFDEF0012EC2B /* head.png */,
@@ -538,6 +552,9 @@
 		E248EBEF205EE5BC0012EC2B /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
+				E248EC2F205F3B960012EC2B /* IGamePadDelegate.h */,
+				E248EC25205F30210012EC2B /* GamePadLayer.cpp */,
+				E248EC26205F30220012EC2B /* GamePadLayer.h */,
 				E248EC1D205F21730012EC2B /* BaseCell.cpp */,
 				E248EC1E205F21730012EC2B /* BaseCell.h */,
 				E248EC1A205F202B0012EC2B /* BodyCell.cpp */,
@@ -728,9 +745,11 @@
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				E2515174205EC5E600B947F4 /* SnakeMenuBg.png in Resources */,
 				E248EC21205F22B80012EC2B /* food.png in Resources */,
+				E248EC2A205F335A0012EC2B /* button.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				22F1051B1A36161500BDC1A9 /* Marker Felt.ttf in Resources */,
+				E248EC2D205F33A90012EC2B /* buttonSelected.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
@@ -751,6 +770,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E248EC2E205F33B70012EC2B /* buttonSelected.png in Resources */,
+				E248EC2B205F33760012EC2B /* button.png in Resources */,
 				E248EC24205F24050012EC2B /* food.png in Resources */,
 				E248EC0F205EFDFB0012EC2B /* body.png in Resources */,
 				E248EC10205EFDFB0012EC2B /* head.png in Resources */,
@@ -780,6 +801,7 @@
 				E248EC07205EE7B70012EC2B /* SnakeHead.cpp in Sources */,
 				E248EC18205F16DC0012EC2B /* Food.cpp in Sources */,
 				E248EC04205EE7090012EC2B /* Snake.cpp in Sources */,
+				E248EC27205F30220012EC2B /* GamePadLayer.cpp in Sources */,
 				E248EC13205F046E0012EC2B /* DefaultConfiguration.cpp in Sources */,
 				E248EC1C205F202B0012EC2B /* BodyCell.cpp in Sources */,
 			);
@@ -789,6 +811,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E248EC30205F3D1F0012EC2B /* IGamePadDelegate.h in Sources */,
+				E248EC28205F30F80012EC2B /* GamePadLayer.cpp in Sources */,
 				E248EC22205F23C30012EC2B /* BaseCell.cpp in Sources */,
 				E248EC23205F23C30012EC2B /* BodyCell.cpp in Sources */,
 				E248EC19205F17AB0012EC2B /* Food.cpp in Sources */,

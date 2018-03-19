@@ -65,5 +65,10 @@ void GameplayLayer::addFood()
     this->addChild(m_food);
 }
 
+void GameplayLayer::setDirection(MoveDirection direction)
+{
+    m_snake->setDirection(direction);
+}
+
 
 

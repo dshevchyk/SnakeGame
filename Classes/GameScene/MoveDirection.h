@@ -10,11 +10,12 @@
 
 enum class MoveDirection
 {
-    Up,
-    Down,
-    Left,
-    Right,
+    Up = 0,
+    Right = 90,
+    Down = 180,
+    Left = 270,
 };
+
 struct MoveDirectionHelpder {
     static MoveDirection GetOppositeDirection( MoveDirection direction) {
         switch(direction)

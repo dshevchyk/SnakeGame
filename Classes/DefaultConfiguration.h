@@ -14,9 +14,11 @@ struct DefaultConfiguration
 {
     static cocos2d::Size frameSize;
     static cocos2d::Size snakeDefaultSize;
+    static cocos2d::Size gamePadButtonSize;
     static float speed;
     static float minMovement;
     static size_t snakeMaxSize;
+    static GLubyte gamePadOpacity;
 };
 
 #endif /* Configuration_h */

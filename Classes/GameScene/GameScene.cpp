@@ -8,6 +8,8 @@
 
 #include "GameScene.h"
 #include "GameplayLayer.h"
+#include "GamePadLayer.h"
+
 USING_NS_CC;
 
 // on "init" you need to initialize your instance
@@ -31,13 +33,17 @@ bool GameScene::init()
     
     m_GameplayLayer = GameplayLayer::create();
     this->addChild(m_GameplayLayer);
-    
+    m_GamePadLayer = GamePadLayer::create();
+    m_GamePadLayer->setPosition(Point(origin.x + visibleSize.width/2,
+                          origin.y + visibleSize.height/2));
+    this->addChild(m_GamePadLayer);
     return true;
 }
 
 void GameScene::onEnter()
 {
     Scene::onEnter();
+    m_GamePadLayer->setDelegate(this);
     // schedule update calls
 //    scheduleUpdate();
 }
@@ -45,6 +51,7 @@ void GameScene::onEnter()
 void GameScene::onExit()
 {
     Scene::onExit();
+    m_GamePadLayer->setDelegate(nullptr);
     // unschedule update
 //    unscheduleUpdate();
 }
@@ -56,5 +63,8 @@ void GameScene::update( float delta )
     
 }
 
-
+void GameScene::onGamePadClicked(MoveDirection direction)
+{
+    m_GameplayLayer->setDirection(direction);
+}
 

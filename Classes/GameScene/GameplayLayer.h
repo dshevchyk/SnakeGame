@@ -13,11 +13,13 @@
 #include "DefaultConfiguration.h"
 class Snake;
 class Food;
+enum class MoveDirection;
 class GameplayLayer : public cocos2d::Layer
 {
 public:
     // implement the "static create()" method manually
     CREATE_FUNC(GameplayLayer);
+    void setDirection(MoveDirection direction);
 protected:
     // scene initialisation
     bool init() override;

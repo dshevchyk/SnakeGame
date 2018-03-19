@@ -34,22 +34,7 @@ void SnakeHead::setDirection(MoveDirection newDirection)
 }
 void SnakeHead::setRotation(MoveDirection currentDirection)
 {
-    switch(currentDirection)
-    {
-        case MoveDirection::Up:
-            m_Sprite->setRotation(0);
-            break;
-        case MoveDirection::Down:
-            m_Sprite->setRotation(180);
-            break;
-        case MoveDirection::Right:
-            m_Sprite->setRotation(90);
-            break;
-        case MoveDirection::Left:
-            m_Sprite->setRotation(270);
-        default:
-            break;
-    }
+    m_Sprite->setRotation(static_cast<int>(currentDirection));
 }
 MoveDirection SnakeHead::getDirection()
 {
